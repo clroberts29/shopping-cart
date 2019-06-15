@@ -50,20 +50,17 @@ while user_input != "DONE":
         print("THANK YOU! Your items have been registered.")
         print(receipt_list)
     else:
-        print("Not done yet")
         try:
             user_input = int(user_input)
-            print("trying...")
         except ValueError:
-            print("Error (1)! Invalid entry. Try again.")
-
-        print(type(user_input))
+            print("Invalid entry. Try again.")
 
         if user_input in id_list:
             receipt_list.append(user_input)
             print(receipt_list)
         else:
-            print("Error (2)! Invalid number. Try again.")
+            if isinstance(user_input, int):
+                print("Invalid number. Try again.")
     
 
 #print(user_item_list[])
