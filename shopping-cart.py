@@ -52,7 +52,7 @@ while user_input != "DONE":
     else:
         print("Not done yet")
         try:
-            user_input = int(input("Please input a product identifier, or type 'DONE' if there are no more items."))
+            user_input = int(user_input)
             print("trying...")
         except ValueError:
             print("Error (1)! Invalid entry. Try again.")
@@ -88,4 +88,5 @@ print("10001")
     # The date and time of the beginning of the checkout process, formatted in a human-friendly way (e.g. 2019-06-06 11:31 AM)
 currentDT = datetime.datetime.now()
 print ("Checkout time: " + currentDT.strftime("%Y-%m-%d %H:%M"))
+print("------------")
 
