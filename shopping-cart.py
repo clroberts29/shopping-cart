@@ -90,6 +90,8 @@ currentDT = datetime.datetime.now()
 print ("Checkout time: " + currentDT.strftime("%Y-%m-%d %H:%M"))
 print("------------")
 
+subtotal = 0
+
 for n in receipt_list:
     
     name_list = [p["name"] for p in products]
@@ -97,4 +99,8 @@ for n in receipt_list:
     
     print(name_list[n-1] + " ... " + to_usd(price_list[n-1]))
 
+    subtotal += price_list[n-1]
+    
 
+print("------------")
+print("Subtotal = " + to_usd(subtotal))
