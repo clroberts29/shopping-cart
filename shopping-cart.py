@@ -106,3 +106,5 @@ print("------------")
 print("Subtotal = " + to_usd(subtotal))
 
 print("NYC Sales Tax (8.75%): " + to_usd(subtotal * .0875))
+
+print("Grand Total: " + to_usd(subtotal + (subtotal*.0875)))
