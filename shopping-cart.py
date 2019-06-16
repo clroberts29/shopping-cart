@@ -92,10 +92,12 @@ print("------------")
 
 subtotal = 0
 
+name_list = [p["name"] for p in products]
+price_list = [p["price"] for p in products]
+
 for n in receipt_list:
     
-    name_list = [p["name"] for p in products]
-    price_list = [p["price"] for p in products]
+
     
     print(name_list[n-1] + " ... " + to_usd(price_list[n-1]))
 
