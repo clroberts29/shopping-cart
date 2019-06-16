@@ -4,6 +4,9 @@
 
 import datetime
 
+def to_usd(my_price):
+    return "${0:,.2f}".format(my_price)
+
 products = [
     {"id":1, "name": "Chocolate Sandwich Cookies", "department": "snacks", "aisle": "cookies cakes", "price": 3.50},
     {"id":2, "name": "All-Seasons Salt", "department": "pantry", "aisle": "spices seasonings", "price": 4.99},
@@ -88,6 +91,10 @@ print ("Checkout time: " + currentDT.strftime("%Y-%m-%d %H:%M"))
 print("------------")
 
 for n in receipt_list:
-    print(products[n])
+    
+    name_list = [p["name"] for p in products]
+    price_list = [p["price"] for p in products]
+    
+    print(name_list[n-1] + " ... " + to_usd(price_list[n-1]))
 
 
