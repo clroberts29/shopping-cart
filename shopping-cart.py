@@ -87,3 +87,7 @@ currentDT = datetime.datetime.now()
 print ("Checkout time: " + currentDT.strftime("%Y-%m-%d %H:%M"))
 print("------------")
 
+for n in receipt_list:
+    print(products[n])
+
+
