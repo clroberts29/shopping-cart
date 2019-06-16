@@ -104,3 +104,5 @@ for n in receipt_list:
 
 print("------------")
 print("Subtotal = " + to_usd(subtotal))
+
+print("NYC Sales Tax (8.75%): " + to_usd(subtotal * .0875))
